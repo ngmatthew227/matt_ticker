@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/dp_2"
+    android:layout_marginBottom="@dimen/dp_5"
+    android:paddingStart="@dimen/dp_10"
+    android:paddingEnd="@dimen/dp_10">
+
+    <TextView
+        android:id="@+id/market_float_asset"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_4"
+        android:fontFamily="@font/plex_medium"
+        android:gravity="start"
+        android:textColor="@color/Color_TextOnGray"
+        android:textSize="@dimen/text_size_10"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/market_float_asset_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/binance_plex_medium"
+        android:maxLines="1"
+        app:layout_constraintStart_toStartOf="parent"
+        android:textColor="@color/Color_Red"
+        app:layout_constraintTop_toBottomOf="@+id/market_float_asset" />
+
+    <TextView
+        android:id="@+id/market_float_asset_change"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/dp_4"
+        android:fontFamily="@font/plex_medium"
+        android:textColor="@color/Color_Green"
+        android:textSize="@dimen/text_size_10"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/market_float_asset_price" />
+</androidx.constraintlayout.widget.ConstraintLayout>

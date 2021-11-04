@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" android:id="@+id/app_logo" android:background="@drawable/market_stow_right_bg" android:layout_width="@dimen/dp_35" android:layout_height="@dimen/dp_35">
+    <ImageView android:layout_gravity="right|center_vertical|center_horizontal|center|end" android:layout_width="@dimen/dp_14" android:layout_height="@dimen/dp_14" android:layout_marginTop="@dimen/dp_6" android:layout_marginBottom="@dimen/dp_6" android:src="@drawable/market_app_icon" android:layout_marginEnd="@dimen/dp_10"/>
+</FrameLayout>
