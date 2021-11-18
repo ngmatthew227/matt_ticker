@@ -40,9 +40,6 @@ public class MarketService {
       MarketInfo hsi =  new MarketInfo(hsiBlock, "hsi");
       MarketInfo hsif = new MarketInfo(hsifBlock, "hsif");
 
-      System.out.println(hsi);
-      System.out.println(hsif);
-
       marketInfoMap.put("hsi", hsi);
       marketInfoMap.put("hsif", hsif);
     } catch (IOException e) {

@@ -301,13 +301,14 @@ public class MainActivity extends AppCompatActivity {
                                 if (mData.size() < marketData.getProductListSize() + 1) {
                                     mData.add(hsif);
                                 } else {
-                                    mData.set(marketData.getProductListSize() + 1, hsif);
+                                    mData.set(marketData.getProductListSize(), hsif);
                                 }
                                 if (EasyFloat.isShow(tagForMaxWin)) {
                                     handlerForMax.sendEmptyMessage(marketData.getProductListSize() + 1);
                                 }
                                 Log.w("hsiHandler", hsiMap.toString());
                             } catch (Exception e){
+                                Log.e("hsiHandler", "hihi");
                                 e.printStackTrace();
                             }
 
