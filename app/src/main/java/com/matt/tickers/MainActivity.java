@@ -304,7 +304,7 @@ public class MainActivity extends AppCompatActivity {
                                     mData.set(marketData.getProductListSize(), hsif);
                                 }
                                 if (EasyFloat.isShow(tagForMaxWin)) {
-                                    handlerForMax.sendEmptyMessage(marketData.getProductListSize() + 1);
+                                    handlerForMax.sendEmptyMessage(marketData.getProductListSize());
                                 }
                                 Log.w("hsiHandler", hsiMap.toString());
                             } catch (Exception e){
