@@ -18,14 +18,19 @@ public class MarketInfo {
     private BigDecimal low;
     private BigDecimal close;
     private Integer dayDirection;
+    private String minCode;
+//    Comment: 1=up, 0 = equal, -1 = down
+    private Integer upDown;
 
-    public MarketInfo(BigDecimal price, BigDecimal open, BigDecimal high, BigDecimal low, BigDecimal close, String code) {
+    public MarketInfo(String minCode, BigDecimal price, BigDecimal open, BigDecimal high, BigDecimal low, BigDecimal close, String code, Integer upDown) {
+        this.minCode = minCode;
         this.price = price;
         this.open = open;
         this.high = high;
         this.low = low;
         this.close = close;
         this.code = code;
+        this.upDown = upDown;
     }
 
     public MarketInfo(Element block, String code) {
@@ -80,6 +85,23 @@ public class MarketInfo {
     public void setCode(String code) {
         this.code = code;
     }
+
+    public Integer getUpDown() {
+        return upDown;
+    }
+
+    public void setUpDown(Integer upDown) {
+        this.upDown = upDown;
+    }
+
+    public String getMinCode() {
+        return minCode;
+    }
+
+    public void setMinCode(String minCode) {
+        this.minCode = minCode;
+    }
+
 
     public BigDecimal getPrice() {
         return price;

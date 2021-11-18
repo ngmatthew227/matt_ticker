@@ -30,14 +30,4 @@
         android:textColor="@color/Color_Red"
         app:layout_constraintTop_toBottomOf="@+id/market_float_asset" />
 
-    <TextView
-        android:id="@+id/market_float_asset_change"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="@dimen/dp_4"
-        android:fontFamily="@font/plex_medium"
-        android:textColor="@color/Color_Green"
-        android:textSize="@dimen/text_size_10"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/market_float_asset_price" />
 </androidx.constraintlayout.widget.ConstraintLayout>

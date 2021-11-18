@@ -338,6 +338,7 @@ public class CustomWebSocketConnection extends WebSocketListener {
         if (webSocket != null) {
             this.webSocket.cancel();
             state = ConnectionStateEnum.CLOSED_ON_ERROR;
+            callback.onResponse(null);
             Log.e("websocket", "[Connection error][" + this.getId() + "] Connection is closing due to error");
         }
     }

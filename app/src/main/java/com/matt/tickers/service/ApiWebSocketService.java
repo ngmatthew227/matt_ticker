@@ -18,6 +18,8 @@ public class ApiWebSocketService extends WebSocketListener {
 
     public static final String WEBSOCKET_TICKER_TOPIC = "market.$symbol$.ticker";
 
+    private static CustomWebSocketConnection webSocketConnection;
+
     public static void subTicker(SubTickerRequest request, ResponseCallback<TickerEvent> callback) throws Exception {
 
         // Check Params
@@ -39,7 +41,17 @@ public class ApiWebSocketService extends WebSocketListener {
             commandList.add(command.toJSONString());
         }
 
-        CustomWebSocketConnection.createConnection(new Options(), commandList, callback);
+        webSocketConnection = CustomWebSocketConnection.createConnection(new Options(), commandList, callback);
+    }
+
+    public static void dismissConnection() {
+        webSocketConnection.close();
+    }
+
+    public static void reconnect() {
+        if (webSocketConnection.getWebSocket() != null) {
+            webSocketConnection.reConnect();
+        }
     }
 
 

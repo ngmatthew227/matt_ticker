@@ -21,15 +21,15 @@ import org.jsoup.select.Elements;
 @RequiresApi(api = Build.VERSION_CODES.O)
 public class MarketService {
 
-  private final LocalTime dayOpenTime = LocalTime.of(8, 0, 0);
-  private final LocalTime dayEndTime = LocalTime.of(16, 0, 0);
+  private static final LocalTime dayOpenTime = LocalTime.of(8, 0, 0);
+  private static final LocalTime dayEndTime = LocalTime.of(16, 0, 0);
 
-  public Boolean isDay() {
+  public static Boolean isDay() {
     LocalTime currentTime = LocalTime.now();
     return currentTime.isAfter(dayOpenTime) && currentTime.isBefore(dayEndTime);
   }
 
-  public Map<String, MarketInfo> getHsinHsif() {
+  public static Map<String, MarketInfo> getHsinHsif() {
     Map<String, MarketInfo> marketInfoMap = new HashMap<>();
     try {
       Document document = Jsoup.connect("https://www.etnet.com.hk/www/eng/futures/index.php").get();
@@ -37,8 +37,8 @@ public class MarketService {
       Element hsifBlock = isDay() ? outerBlock.get(0) : outerBlock.get(1);
       Element hsiBlock = outerBlock.get(2);
 
-      MarketInfo hsi =  new MarketInfo(hsifBlock, "hsi");
-      MarketInfo hsif = new MarketInfo(hsiBlock, "hsif");
+      MarketInfo hsi =  new MarketInfo(hsiBlock, "hsi");
+      MarketInfo hsif = new MarketInfo(hsifBlock, "hsif");
 
       System.out.println(hsi);
       System.out.println(hsif);

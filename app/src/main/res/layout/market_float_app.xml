@@ -6,7 +6,7 @@
     android:layout_height="wrap_content"
     android:alpha="0.75"
     android:background="@drawable/market_float_bg"
-    android:minHeight="@dimen/dp_82"
+    android:minHeight="@dimen/dp_60"
     android:paddingTop="@dimen/dp_8"
     android:paddingBottom="@dimen/dp_4">
 
@@ -20,11 +20,20 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
-        android:id="@+id/market_enlarge_icon"
-        android:layout_width="11dp"
-        android:layout_height="11dp"
-        android:layout_marginEnd="@dimen/dp_10"
-        android:src="@drawable/market_enlarge_icon"
+        android:id="@+id/connection_status"
+        android:layout_width="10dp"
+        android:layout_height="10dp"
+        android:layout_marginEnd="@dimen/dp_25"
+        android:src="@drawable/status"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/refresh_btn"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:layout_marginEnd="@dimen/dp_8"
+        android:src="@drawable/refresh"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
