@@ -1,29 +1,33 @@
 package com.matt.tickers;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
+import android.util.Log;
 import android.view.LayoutInflater;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.widget.AppCompatImageView;
 import androidx.core.content.ContextCompat;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.matt.tickers.data.DBManager;
 
+import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class ProductListAdapter extends RecyclerView.Adapter<ProductListAdapter.ViewHolder> {
+public class ProductListAdapter extends RecyclerView.Adapter<ProductListAdapter.ViewHolder>{
 
     private Map<String, Integer> resourcesMap;
-    private DBManager dbManager;
+    private final DBManager dbManager;
     private List<Map<String, Object>> mData;
     private Context context;
-
 
     public ProductListAdapter(List<Map<String, Object>> mData, DBManager dbManager) {
         this.mData = mData;
@@ -45,41 +49,20 @@ public class ProductListAdapter extends RecyclerView.Adapter<ProductListAdapter.
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.product_item, parent, false);
         context = parent.getContext();
-        initMap();
         return new ViewHolder(view);
     }
 
-    public void initMap() {
-        resourcesMap = new HashMap<>();
-        resourcesMap.put("btcusdt", R.drawable.btcusdt);
-        resourcesMap.put("ethusdt", R.drawable.ethusdt);
-        resourcesMap.put("solusdt", R.drawable.solusdt);
-        resourcesMap.put("xrpusdt", R.drawable.xrpusdt);
-        resourcesMap.put("dogeusdt", R.drawable.dogeusdt);
-        resourcesMap.put("shibusdt", R.drawable.shibusdt);
-        resourcesMap.put("lunausdt", R.drawable.lunausdt);
-        resourcesMap.put("uniusdt", R.drawable.uniusdt);
-        resourcesMap.put("linkusdt", R.drawable.linkusdt);
-        resourcesMap.put("axsusdt", R.drawable.axsusdt);
-        resourcesMap.put("xlmusdt", R.drawable.xlmusdt);
-        resourcesMap.put("atomusdt", R.drawable.atomusdt);
-        resourcesMap.put("trxusdt", R.drawable.trxusdt);
-        resourcesMap.put("thetausdt", R.drawable.thetausdt);
-        resourcesMap.put("fttusdt", R.drawable.fttusdt);
-        resourcesMap.put("filusdt", R.drawable.filusdt);
-        resourcesMap.put("ftmusdt", R.drawable.ftmusdt);
-        resourcesMap.put("manausdt", R.drawable.manausdt);
-        resourcesMap.put("eosusdt", R.drawable.eosusdt);
-        resourcesMap.put("flowusdt", R.drawable.flowusdt);
-        resourcesMap.put("miotausdt", R.drawable.miotausdt);
-        resourcesMap.put("sandusdt", R.drawable.sandusdt);
+    private Integer getIconId(String code) {
+        String cryptoCode = code.trim().replaceAll("usdt", "");
+        Integer resourcesId = context.getResources().getIdentifier(cryptoCode, "drawable", "com.matt.tickers");
+        return resourcesId;
     }
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         Map<String, Object> product = mData.get(position);
         holder.coinCode.setText((String) product.get("display_code"));
-        holder.coinIcon.setImageResource(resourcesMap.get(product.get("code")));
+        holder.coinIcon.setImageResource(getIconId((String) product.get("code")));
         Integer notCheckColor = ContextCompat.getColor(context, R.color.Gray_900);
         Integer checkColor = ContextCompat.getColor(context, R.color.Yellow_600);
         if ((Integer) product.get("show") == 0) {
@@ -103,12 +86,15 @@ public class ProductListAdapter extends RecyclerView.Adapter<ProductListAdapter.
         private final ImageView showBtn;
         private final ImageView coinIcon;
         private final TextView coinCode;
+        private final AppCompatImageView dragBtn;
 
+        @SuppressLint("ClickableViewAccessibility")
         ViewHolder(View itemView) {
             super(itemView);
             showBtn = itemView.findViewById(R.id.show_btn);
             coinIcon = itemView.findViewById(R.id.coin_icon);
             coinCode = itemView.findViewById(R.id.coin_code);
+            dragBtn = itemView.findViewById(R.id.imgDragHandler);
 
             showBtn.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -117,8 +103,12 @@ public class ProductListAdapter extends RecyclerView.Adapter<ProductListAdapter.
                     updateShowField(getAdapterPosition());
                 }
             });
+
+
         }
     }
+
+
 
 
 }

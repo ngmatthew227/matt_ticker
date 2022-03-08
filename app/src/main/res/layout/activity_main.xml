@@ -8,42 +8,61 @@
     android:background="@color/Gray_850"
     tools:context=".MainActivity">
 
-    <Button
-        android:id="@+id/open_btn"
-        android:layout_width="wrap_content"
+    <include
+        android:id="@+id/searchbox"
+        layout="@layout/search_textbox"
+        android:layout_width="250dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="72dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="93dp"
-        android:text="@string/open"
-        app:layout_anchorGravity="center"
-        app:layout_constraintEnd_toStartOf="@+id/show_btn"
-        app:layout_constraintHorizontal_bias="0.0"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="@dimen/dp_20"
+        android:layout_marginBottom="10dp"
+        android:layout_marginEnd="@dimen/dp_5"
+        app:layout_constraintBottom_toTopOf="@+id/open_btn"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/show_btn"
+        android:id="@+id/add_crypto_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="253dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="70dp"
-        android:text="Show"
-        app:layout_anchorGravity="center"
+        android:layout_marginTop="22dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintStart_toEndOf="@+id/searchbox"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:text="@string/add"
+        android:backgroundTint="@color/sns_color_white_5"
+        android:clickable="false"
+        app:layout_constraintTop_toTopOf="parent">
+
+    </Button>
+
+    <Button
+        android:id="@+id/open_btn"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_50"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/open"
+        app:layout_anchorGravity="center"
+        app:layout_constraintEnd_toEndOf="@+id/add_crypto_btn"
+        app:layout_constraintHorizontal_bias="0.701"
+        android:backgroundTint="@color/sns_color_white_5"
+        app:layout_constraintStart_toStartOf="@id/searchbox"
+        app:layout_constraintTop_toBottomOf="@+id/searchbox" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/product_list_rv"
         android:layout_width="match_parent"
         android:layout_height="0dp"
+
         android:layout_marginTop="10dp"
+        android:inputType="textNoSuggestions"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/open_btn" />
+        app:layout_constraintTop_toBottomOf="@+id/open_btn"
+        app:layout_constraintVertical_bias="0.0" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

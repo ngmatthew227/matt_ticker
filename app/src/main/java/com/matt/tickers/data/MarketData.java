@@ -3,12 +3,13 @@ package com.matt.tickers.data;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.Objects;
 
 public class MarketData {
 
     private final List<Map<String, Object>> marketDatas;
+    public Map<String, String> productDisplayMap;
     private Map<String, Integer> productIdxMap;
-    private Map<String, String> productDisplayMap;
     private String showCode;
     private String symbol;
 
@@ -17,19 +18,25 @@ public class MarketData {
         initData();
     }
 
+    public Map<String, String> getProductDisplayMap() {
+        return productDisplayMap;
+    }
+
     private void initData() {
         productIdxMap = new HashMap<>();
         productDisplayMap = new HashMap<>();
         showCode = "";
         StringBuilder symbolBuilder = new StringBuilder();
 
-        for (int i = 0; i < marketDatas.size() ; i++) {
+        for (int i = 0; i < marketDatas.size(); i++) {
             Map<String, Object> product = marketDatas.get(i);
             String code = (String) product.get("code");
             String displayCode = (String) product.get("display_code");
             Integer displayIdx = i;
             Integer showCodeInt = (Integer) product.get("show_in_min");
-            symbolBuilder.append(code);
+            if (!code.equals("hsi")) {
+                symbolBuilder.append(code);
+            }
             if (i != marketDatas.size() - 1) {
                 symbolBuilder.append(",");
             }

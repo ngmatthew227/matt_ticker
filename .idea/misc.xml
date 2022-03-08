@@ -6,21 +6,30 @@
         <entry key="..\:/Users/ngcho/AndroidStudioProjects/MattTicker/app/src/main/res/drawable/ic_launcher_background.xml" value="0.11770833333333333" />
         <entry key="..\:/Users/ngcho/AndroidStudioProjects/MattTicker/app/src/main/res/drawable/market_float_bg.xml" value="0.1890625" />
         <entry key="..\:/Users/ngcho/AndroidStudioProjects/MattTicker/app/src/main/res/drawable/market_stow_left_bg.xml" value="0.38333333333333336" />
+        <entry key="..\:/Users/ngcho/AndroidStudioProjects/MattTicker/app/src/main/res/drawable/refresh.xml" value="0.19895833333333332" />
+        <entry key="..\:/Users/ngcho/AndroidStudioProjects/MattTicker/app/src/main/res/drawable/searchtextbox_border.xml" value="0.14583333333333334" />
+        <entry key="..\:/Users/ngcho/AndroidStudioProjects/MattTicker/app/src/main/res/drawable/star.xml" value="0.18333333333333332" />
+        <entry key="..\:/Users/ngcho/AndroidStudioProjects/MattTicker/app/src/main/res/drawable/status.xml" value="0.27395833333333336" />
         <entry key="..\:/Users/ngcho/AndroidStudioProjects/MattTicker/app/src/main/res/drawable/wallet_window_stow.xml" value="0.11770833333333333" />
         <entry key="..\:/Users/ngcho/AndroidStudioProjects/MattTicker/app/src/main/res/font/plex_medium.xml" value="0.30364583333333334" />
-        <entry key="..\:/Users/ngcho/AndroidStudioProjects/MattTicker/app/src/main/res/layout/activity_main.xml" value="0.165" />
+        <entry key="..\:/Users/ngcho/AndroidStudioProjects/MattTicker/app/src/main/res/layout/activity_main.xml" value="0.21577574967405475" />
         <entry key="..\:/Users/ngcho/AndroidStudioProjects/MattTicker/app/src/main/res/layout/content_main.xml" value="0.375" />
         <entry key="..\:/Users/ngcho/AndroidStudioProjects/MattTicker/app/src/main/res/layout/fragment_first.xml" value="0.18070652173913043" />
         <entry key="..\:/Users/ngcho/AndroidStudioProjects/MattTicker/app/src/main/res/layout/fragment_second.xml" value="0.18070652173913043" />
         <entry key="..\:/Users/ngcho/AndroidStudioProjects/MattTicker/app/src/main/res/layout/list_item.xml" value="0.2390625" />
+        <entry key="..\:/Users/ngcho/AndroidStudioProjects/MattTicker/app/src/main/res/layout/lite_dialog_switch.xml" value="0.375" />
         <entry key="..\:/Users/ngcho/AndroidStudioProjects/MattTicker/app/src/main/res/layout/market_float_app.xml" value="1.0" />
+        <entry key="..\:/Users/ngcho/AndroidStudioProjects/MattTicker/app/src/main/res/layout/market_float_app_min.xml" value="0.5" />
         <entry key="..\:/Users/ngcho/AndroidStudioProjects/MattTicker/app/src/main/res/layout/market_float_app_stow_left.xml" value="0.3671875" />
         <entry key="..\:/Users/ngcho/AndroidStudioProjects/MattTicker/app/src/main/res/layout/market_float_app_stow_right.xml" value="0.3671875" />
         <entry key="..\:/Users/ngcho/AndroidStudioProjects/MattTicker/app/src/main/res/layout/market_float_item.xml" value="0.11" />
+        <entry key="..\:/Users/ngcho/AndroidStudioProjects/MattTicker/app/src/main/res/layout/product_item.xml" value="0.25" />
+        <entry key="..\:/Users/ngcho/AndroidStudioProjects/MattTicker/app/src/main/res/layout/search_textbox.xml" value="0.165" />
         <entry key="..\:/Users/ngcho/AndroidStudioProjects/MattTicker/app/src/main/res/layout/test.xml" value="0.23020833333333332" />
         <entry key="..\:/Users/ngcho/AndroidStudioProjects/MattTicker/app/src/main/res/layout/test_float.xml" value="0.14635416666666667" />
         <entry key="..\:/Users/ngcho/AndroidStudioProjects/MattTicker/app/src/main/res/menu/menu_main.xml" value="0.23020833333333332" />
         <entry key="..\:/Users/ngcho/AndroidStudioProjects/MattTicker/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.20052083333333334" />
+        <entry key="..\:/Users/ngcho/AppData/Local/Android/Sdk/platforms/android-31/data/res/layout/simple_list_item_1.xml" value="0.12239583333333333" />
       </map>
     </option>
   </component>

@@ -1,0 +1,21 @@
+<com.google.android.material.textfield.TextInputLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/search_textbox"
+    style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.ExposedDropdownMenu"
+    android:hint="@string/search"
+    app:boxCornerRadiusBottomEnd="17dp"
+    app:boxCornerRadiusTopEnd="17dp"
+    app:boxCornerRadiusBottomStart="17dp"
+    app:boxCornerRadiusTopStart="17dp"
+    app:boxStrokeWidth="0dp"
+    >
+
+    <AutoCompleteTextView
+        android:id="@+id/auto_complete_txt_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="text"
+        android:background="@null"
+        />
+
+</com.google.android.material.textfield.TextInputLayout>

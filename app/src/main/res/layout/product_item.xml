@@ -18,6 +18,13 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal">
 
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/imgDragHandler"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:padding="5dp"
+                android:tint="@color/white_50"
+                android:src="@drawable/ic_baseline_drag_indicator_24"/>
 
             <ImageView
                 android:id="@+id/show_btn"

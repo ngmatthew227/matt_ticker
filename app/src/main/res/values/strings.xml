@@ -2384,7 +2384,7 @@
     <string name="delay_do_kyc">Skip For Now</string>
     <string name="delete">Delete</string>
     <string name="delete_address">Delete Address</string>
-    <string name="delete_floating_window">删除浮窗</string>
+    <string name="delete_floating_window">Delete</string>
     <string name="delete_pay_method">Are you sure you want to delete this payment method?</string>
     <string name="delete_success">Delete Successful</string>
     <string name="delivery_battle_name">Battle</string>
@@ -8660,4 +8660,6 @@
     <string name="next">Next</string>
     <string name="previous">Prev</string>
     <string name="open">Open</string>
+    <string name="add">Add</string>
+    <string name="search">Search</string>
 </resources>
