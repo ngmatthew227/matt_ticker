@@ -13,3 +13,6 @@
 .externalNativeBuild
 .cxx
 local.properties
+*.har
+*.exe
+.vscode/tasks.json
